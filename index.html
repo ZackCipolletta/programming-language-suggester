@@ -5,9 +5,46 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <script src="/js/scripts.js"
+  <script src="/js/scripts.js"></script>
+  <!--<script src="/css/bootstrap.css"></script>-->
+  <link rel="stylesheet" href="/css/styles.css" type="text/css">
 </head>
 <body>
-  
+  <h1>Programming Language Suggester</h1>
+  <h4>Unusre of which programming language to study? Take our survey and find out!</h4>
+  <form class="user-input">
+    <ol>
+      <li>
+        <label id="q1">Do you already know a programming language?
+          <select id="langKnowledge">
+            <option value="1">JavaScript</option>
+            <option value="2">C#</option>
+            <option value="3">Python</option>
+            <option value="4">No</option>
+          </select>
+        </label>
+      </li>
+      <li>
+        <label id="q2">Are you more interested in front end or back end development? <br>
+          <input type="radio" name="frontOrBack" value="1">Front end<br>
+          <input type="radio" name="frontOrBack" value="2">Back end
+        </label>
+    </li>
+    <li>
+      <label id="q3">Do you prefer the smell of:<br> 
+        <input type="radio" name="smells" value="1">Gasoline<br>
+        <input type="radio" name="smells" value="2">French Fries<br>
+        <input type="radio" name="smells" value="3">Bank customers </label>
+    </li>
+    <li>
+      <label id="q4">Would you rather work outside even in bad weather or work inside?</label>
+    </li>
+    <li>
+      <label id="q5">Pancakes, french toast or waffles?</label>
+    </li>
+      <button class="button" type="submit">Submit</button>
+    </ol>
+  </form>
+  <p class="survey-results"></p>
 </body>
 </html>
