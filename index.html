@@ -26,30 +26,37 @@
       </li>
       <li>
         <label id="q2">Are you more interested in front end or back end development? <br>
-          <input type="radio" name="frontOrBack" value="1">Front end<br>
+          <input type="radio" name="frontOrBack" value="1" checked>Front end<br>
           <input type="radio" name="frontOrBack" value="2">Back end<br>          
           <input type="radio" name="frontOrBack" value="3">Who are you?
         </label>
     </li>
     <li>
       <label id="q3">Do you prefer the smell of:<br> 
-        <input type="radio" name="smells" value="3">Gasoline<br>
+        <input type="radio" name="smells" value="3" checked>Gasoline<br>
         <input type="radio" name="smells" value="2">French Fries<br>
-        <input type="radio" name="smells" value="1">Bank customers </label>
+        <input type="radio" name="smells" value="1">Bank customers 
+      </label>
     </li>
     <li>
-      <label id="q4">What sounds more interesting?</label>
-      <select id="genInterests">
-        <option name="interests" value="1">Building websites</option>
-        <option name="interests" value="2">Working with large amoutns of data</option>
-        <option name="interests" value="3">Creating video games</option>
-        <option name="interests" value="4">What was the question again?</option>
-      </select>
+      <label id="q4">What sounds more interesting?
+        <select id="genInterests">
+          <option name="interests" value="1">Building websites</option>
+          <option name="interests" value="2">Working with large amoutns of data</option>
+          <option name="interests" value="3">Creating video games</option>
+          <option name="interests" value="4">What was the question again?</option>
+        </select>
+    </label>
     </li>
     <li>
-      <label id="q5">Pancakes, french toast or waffles?</label>
+      <label id="q5">Pancakes, french toast or waffles?<br>
+        <input type="radio" name="breakfast" value="1" checked>Pancakes<br>
+        <input type="radio" name="breakfast" value="2">French Toast<br>
+        <input type="radio" name="breakfast" value="3">Waffles<br>
+        <input type="radio" name="breakfast" value="4">Is this YouTube?
+      </label>
     </li>
-      <button class="button" type="submit">Submit</button>
+      <button class="button" id="submit" type="submit">Submit</button>
     </ol>
   </form>
   <p class="survey-results"></p>
