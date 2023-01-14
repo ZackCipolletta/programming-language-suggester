@@ -107,7 +107,9 @@ function resultsFunc() {
       }
     }
 
-    if (formResults == 0) {
+    if (formResults === 0 && name !== '') {
+      results = 'Sorry ' + name.charAt(0).toUpperCase() + name.slice(1) + ', this is not the YouTubes, but hey - want to learn a programming language while youre here? Then you should learn '+ results.slice(0, -9) + '.';
+    } else if (formResults == 0){
       results = 'Sorry this is not the YouTubes, but hey - want to learn a programming language while youre here? Then you should learn '+ results.slice(0, -9) + '.';
     } else {
       if (name !== '' && yum === 'pancakes' || name !== '' && yum === 'waffles' || name !== '' && yum === 'french toast') {
