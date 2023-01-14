@@ -87,16 +87,22 @@ function resultsFunc() {
   const formResults = question1() + question2()+ question3() + question4() + question5();
   const name = document.getElementById('user-name').value;
   let results = '';
-    if (formResults >= 10){
-      results = "C#"+document.getElementById('c-sharp').removeAttribute('class');
-    } else if (formResults >= 6){
-      results = "JavaScript"+document.getElementById('javaScript').removeAttribute('class');
-    } else if (formResults >= 3){
-      results = "Python"+document.getElementById('python').removeAttribute('class');    
-    } else if (formResults <= 2){
-      results = "HQ9+"+document.getElementById('HQ9+').removeAttribute('class');
+      if (formResults >= 10){
+        results = "C#"+document.getElementById('c-sharp').removeAttribute('class');
+      } else if (formResults >= 6){
+        results = "JavaScript"+document.getElementById('javaScript').removeAttribute('class');
+      } else if (formResults >= 3){
+        results = "Python"+document.getElementById('python').removeAttribute('class');    
+      } else if (formResults <= 2){
+        results = "HQ9+"+document.getElementById('HQ9+').removeAttribute('class');
+      }
+    if (name !== '') {
+      results = name.charAt(0).toUpperCase() + name.slice(1) + ', it looks like you should learn ' + results.slice(0, -9) + '.';
+    } else {
+      results = 'You should learn ' + results.slice(0, -9) + '.';
     }
-    results = name.charAt(0).toUpperCase() + name.slice(1) + ', it looks like you should learn ' + results.slice(0, -9) + '.';
+
+
   return results;
 }
 

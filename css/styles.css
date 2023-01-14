@@ -1,3 +1,16 @@
 .hidden {
   display: none;
 }
+
+body {
+  margin:auto;
+  padding: 50px;
+  padding-right: 500px;
+  background-color: black;
+  color: white;
+}
+
+.survey-results {
+  font-size: x-large ;
+  font-weight: 500;
+}
