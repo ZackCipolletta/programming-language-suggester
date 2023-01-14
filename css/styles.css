@@ -12,5 +12,9 @@ body {
 
 .survey-results {
   font-size: x-large ;
-  font-weight: 500;
+  font-weight: 250;
+}
+
+h4 {
+  padding: 10px 0px 10px 0px;
 }

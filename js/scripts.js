@@ -101,8 +101,6 @@ function resultsFunc() {
     } else {
       results = 'You should learn ' + results.slice(0, -9) + '.';
     }
-
-
   return results;
 }
 
