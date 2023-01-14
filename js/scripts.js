@@ -96,10 +96,25 @@ function resultsFunc() {
       } else if (formResults <= 2){
         results = "HQ9+"+document.getElementById('HQ9+').removeAttribute('class');
       }
-    if (name !== '') {
-      results = name.charAt(0).toUpperCase() + name.slice(1) + ', it looks like you should learn ' + results.slice(0, -9) + '.';
+      let yum;
+    if (question5() !== 0){
+      if(question5() === 1){
+        yum = 'pancakes';
+      } else if (question5() === 2){
+        yum = 'french toast';
+      } else if (question5() === 3){
+        yum = 'waffles';
+      }
+    }
+
+    if (formResults == 0) {
+      results = 'Sorry this is not the YouTubes, but hey - want to learn a programming language while youre here? Then you should learn '+ results.slice(0, -9) + '.';
     } else {
-      results = 'You should learn ' + results.slice(0, -9) + '.';
+      if (name !== '' && yum === 'pancakes' || name !== '' && yum === 'waffles' || name !== '' && yum === 'french toast') {
+        results = name.charAt(0).toUpperCase() + name.slice(1) + ' it looks like you like ' + yum + ' (yum) and you should learn ' + results.slice(0, -9) + '.';
+      } else {
+        results = 'You should learn ' + results.slice(0, -9) + '.';
+      }
     }
   return results;
 }
@@ -112,10 +127,6 @@ function printResults() {
   const resultsPrint = document.querySelector(".survey-results");
     resultsPrint.innerHTML = resultsFunc();
 }
-
-
-
-
 
 window.addEventListener("load", function(){
   document.querySelector(".button").addEventListener("click", submitFunc);
