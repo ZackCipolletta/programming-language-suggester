@@ -24,7 +24,7 @@ Users can also enter their name into the site to be presented with a more person
 ## Known Bugs
  * Upon hitting the submit button the result generated from resultsFunc() has a string containing "undefined" concatenated onto the end of it.  I have thus far been unable to determine the source of the issue.  My work around was to slice off the last 9 characters of the result before concatenating the result into the message presented to the user.
  
- 
+
 ## License
 MIT
 
