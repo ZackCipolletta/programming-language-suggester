@@ -7,6 +7,7 @@ function submitFunc(e) {
   question3();
   question4();
   question5();
+  nameExists();
   yummy();
   resultsFunc();
   clearFunc();
@@ -116,14 +117,28 @@ function resultsFunc() {
     } else if (formResults == 0){
       results = 'Sorry this is not the YouTubes, but hey - want to learn a programming language while youre here? Then you should learn '+ results.slice(0, -9) + '.';
     } else {
-      if (name !== '' && yummy() === 'pancakes' || name !== '' && yummy() === 'waffles' || name !== '' && yummy() === 'french toast') {
-        results = name.charAt(0).toUpperCase() + name.slice(1) + ' it looks like you like ' + yummy() + ' (yum) and you should learn ' + results.slice(0, -9) + '.';
+      if (nameExists() === 'yes') {
+        results = name.charAt(0).toUpperCase() + name.slice(1) + ', it looks like you like ' + yummy() + ' (yum) and you should learn ' + results.slice(0, -9) + '.';
       } else {
         results = 'You should learn ' + results.slice(0, -9) + '.';
       }
     }
   return results;
 }
+
+function nameExists(){
+  const name = document.getElementById('user-name').value;
+  let namePresent;
+  if (name !== '' && yummy() === 'pancakes' ||
+    name !== '' && yummy() === 'waffles' ||
+    name !== '' && yummy() === 'french toast') {
+      namePresent = 'yes';
+    } else {
+      namePresent = 'no';
+    }
+  return namePresent;
+}
+
 
 function clearFunc(){
   return document.querySelectorAll('span').forEach(el=>el.classList.add('hidden'));
