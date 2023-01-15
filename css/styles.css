@@ -18,3 +18,14 @@ body {
 h4 {
   padding: 10px 0px 10px 0px;
 }
+
+.chaos {
+  padding:0;
+  border:0;
+  background: none;
+}
+
+.reset {
+  padding: 5px;
+  border: 5px;
+}

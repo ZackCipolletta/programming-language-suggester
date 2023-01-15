@@ -156,7 +156,6 @@ function nameExists(){
   return namePresent;
 }
 
-
 function clearFunc(){
   return document.querySelectorAll('span').forEach(el=>el.classList.add('hidden'));
 }
@@ -169,3 +168,4 @@ function printResults() {
 window.addEventListener("load", function(){
   document.querySelector(".button").addEventListener("click", submitFunc);
 });
+
