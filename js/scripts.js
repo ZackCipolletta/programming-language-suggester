@@ -7,6 +7,7 @@ function submitFunc(e) {
   question3();
   question4();
   question5();
+  yummy();
   resultsFunc();
   clearFunc();
   printResults();
@@ -83,10 +84,23 @@ function question5() {
   return food;
 }
 
+function yummy() {
+  let yum;
+  if (question5() !== 0){
+    if(question5() === 1){
+      yum = 'pancakes';
+    } else if (question5() === 2){
+      yum = 'french toast';
+    } else if (question5() === 3){
+      yum = 'waffles';
+    }
+  } return yum
+}
+
 function resultsFunc() {
   const formResults = question1() + question2()+ question3() + question4() + question5();
   const name = document.getElementById('user-name').value;
-  let results = '';
+  let results;
       if (formResults >= 10){
         results = "C#"+document.getElementById('c-sharp').removeAttribute('class');
       } else if (formResults >= 6){
@@ -96,24 +110,14 @@ function resultsFunc() {
       } else if (formResults <= 2){
         results = "HQ9+"+document.getElementById('HQ9+').removeAttribute('class');
       }
-      let yum;
-    if (question5() !== 0){
-      if(question5() === 1){
-        yum = 'pancakes';
-      } else if (question5() === 2){
-        yum = 'french toast';
-      } else if (question5() === 3){
-        yum = 'waffles';
-      }
-    }
 
     if (formResults === 0 && name !== '') {
       results = 'Sorry ' + name.charAt(0).toUpperCase() + name.slice(1) + ', this is not the YouTubes, but hey - want to learn a programming language while youre here? Then you should learn '+ results.slice(0, -9) + '.';
     } else if (formResults == 0){
       results = 'Sorry this is not the YouTubes, but hey - want to learn a programming language while youre here? Then you should learn '+ results.slice(0, -9) + '.';
     } else {
-      if (name !== '' && yum === 'pancakes' || name !== '' && yum === 'waffles' || name !== '' && yum === 'french toast') {
-        results = name.charAt(0).toUpperCase() + name.slice(1) + ' it looks like you like ' + yum + ' (yum) and you should learn ' + results.slice(0, -9) + '.';
+      if (name !== '' && yummy() === 'pancakes' || name !== '' && yummy() === 'waffles' || name !== '' && yummy() === 'french toast') {
+        results = name.charAt(0).toUpperCase() + name.slice(1) + ' it looks like you like ' + yummy() + ' (yum) and you should learn ' + results.slice(0, -9) + '.';
       } else {
         results = 'You should learn ' + results.slice(0, -9) + '.';
       }
