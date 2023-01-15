@@ -8,9 +8,11 @@ function submitFunc(e) {
   question4();
   question5();
   nameExists();
+  zeroNoName()
   yummy();
-  resultsFunc();
   clearFunc();
+  resultsFunc();
+  formResultsTotal();
   printResults();
 }
 
@@ -98,23 +100,27 @@ function yummy() {
   } return yum
 }
 
-function resultsFunc() {
+function formResultsTotal() {
   const formResults = question1() + question2()+ question3() + question4() + question5();
+  return formResults;
+}
+
+function resultsFunc() {
   const name = document.getElementById('user-name').value;
   let results;
-      if (formResults >= 10){
+      if (formResultsTotal() >= 10){
         results = "C#"+document.getElementById('c-sharp').removeAttribute('class');
-      } else if (formResults >= 6){
+      } else if (formResultsTotal() >= 6){
         results = "JavaScript"+document.getElementById('javaScript').removeAttribute('class');
-      } else if (formResults >= 3){
+      } else if (formResultsTotal() >= 3){
         results = "Python"+document.getElementById('python').removeAttribute('class');    
-      } else if (formResults <= 2){
+      } else if (formResultsTotal() <= 2){
         results = "HQ9+"+document.getElementById('HQ9+').removeAttribute('class');
       }
 
-    if (formResults === 0 && name !== '') {
+    if (zeroNoName() === 'yes') {
       results = 'Sorry ' + name.charAt(0).toUpperCase() + name.slice(1) + ', this is not the YouTubes, but hey - want to learn a programming language while youre here? Then you should learn '+ results.slice(0, -9) + '.';
-    } else if (formResults == 0){
+    } else if (zeroNoName() === 'no'){
       results = 'Sorry this is not the YouTubes, but hey - want to learn a programming language while youre here? Then you should learn '+ results.slice(0, -9) + '.';
     } else {
       if (nameExists() === 'yes') {
@@ -124,6 +130,17 @@ function resultsFunc() {
       }
     }
   return results;
+}
+
+function zeroNoName() {
+  const name = document.getElementById('user-name').value;
+  let resultsZeroName;
+    if (formResultsTotal() === 0 && name !== '') {
+      resultsZeroName = 'yes';
+    } else if (formResultsTotal() == 0){
+      resultsZeroName = 'no';
+    }
+  return resultsZeroName;
 }
 
 function nameExists(){
