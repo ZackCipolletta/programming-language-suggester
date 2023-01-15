@@ -167,5 +167,30 @@ function printResults() {
 
 window.addEventListener("load", function(){
   document.querySelector(".button").addEventListener("click", submitFunc);
+  document.querySelector(".chaos").addEventListener("click", chaos)
+  document.querySelector(".reset").addEventListener("click", reset);
 });
 
+function randColorA() {
+  let a = Math.floor(Math.random()*256);
+  return a;
+}
+function randColorB() {
+  let b = Math.floor(Math.random()*256);
+  return b;
+}
+function randColorC() {
+  let c = Math.floor(Math.random()*256);
+  return c;
+}
+
+function chaos(){
+  document.body.style.backgroundColor = 'rgb('+ randColorA() + ',' + randColorB() + ',' + randColorC() + ')';
+  document.body.style.color = 'rgb('+ randColorA() + ',' + randColorB() + ',' + randColorC() + ')';
+  document.body.style.fontSize = randColorA() + 'px';
+}
+function reset(){
+  document.body.style.backgroundColor = 'black';
+  document.body.style.color = 'white';
+  document.body.style.fontSize = '12px';
+}
