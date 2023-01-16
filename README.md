@@ -11,9 +11,10 @@ An application to help users decide which programming language to learn.
 * CSS
 
 ## Description
-A basic website to help people interested in programming to decide which language they should learn first.
-Users answer each of the questions and click the submit button to be presented with a suggestion of which programming language they should learn along with some basic information about that language.
-Users can also enter their name into the site to be presented with a more personalized message once they submit the form.
+This is the experimental version of the site.  This is used to try out new code and new features without causing issues for the main version fo the site.
+
+The added 'chaos' buttons will assign random RGB values to the backgrounad and font color. The reset buttons will reset the page back to baseline.  I am also experimenting with ways to display or hide the buttons on the page.
+
 
 ## Setup/Installation Requirements
 
