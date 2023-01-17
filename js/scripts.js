@@ -8,7 +8,7 @@ function submitFunc(e) {
   question4();
   question5();
   nameExists();
-  zeroNoName()
+  zeroNoName();
   yummy();
   clearFunc();
   resultsFunc();
@@ -97,7 +97,7 @@ function yummy() {
     } else if (question5() === 3){
       yum = 'waffles';
     }
-  } return yum
+  } return yum;
 }
 
 function formResultsTotal() {
