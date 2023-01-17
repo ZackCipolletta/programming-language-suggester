@@ -162,7 +162,7 @@ function clearFunc(){
 
 function printResults() {
   const resultsPrint = document.querySelector(".survey-results");
-    resultsPrint.innerHTML = resultsFunc();
+    resultsPrint.innerText = resultsFunc();
 }
 
 window.addEventListener("load", function(){
